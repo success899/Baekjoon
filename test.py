@@ -1,3 +1,3 @@
-abc = 'test'
-
-print(abc)
+abc = 'tesqwdt'
+acc = 'test'
+print(abc, acc)
