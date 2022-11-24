@@ -5,8 +5,8 @@ N = int(input())
 N_list = []
 
 for _ in range(N):
-    x, y = input().split()
-    N_list.append([x, y])
+    x, y = map(int, input().split())
+    N_list.append((x, y))
 
 for i in N_list:
     result = 1
