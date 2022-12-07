@@ -10,9 +10,8 @@ def func():
         return None
 
     for i in range(1, N+1):
-        if i not in Num_tmp:
-            Num_tmp.append(i)
-            func()
-            del Num_tmp[-1]
+        Num_tmp.append(i)
+        func()
+        del Num_tmp[-1]
 
 func()
