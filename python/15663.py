@@ -4,26 +4,23 @@ input=sys.stdin.readline
 N, M = map(int,input().split())
 N_list = list(map(int,input().split()))
 N_list.sort()
-Num_tmp = []
-result = []
 tmp = [False] * N
+Num_tmp = []
 
 def func():
     if len(Num_tmp) == M:
-        temp = ' '.join(map(str, Num_tmp))
-        if temp not in result:
-            result.append(temp)
+        print(' '.join(map(str, Num_tmp)))
         return None
 
+    temp_num = 0
+
     for i in range(len(N_list)):
-        if not tmp[i]:
+        if not tmp[i] and temp_num != N_list[i]:
             tmp[i] = True
             Num_tmp.append(N_list[i])
+            temp_num = N_list[i]
             func()
-            del Num_tmp[-1]
             tmp[i] = False
+            del Num_tmp[-1]
 
 func()
-
-for i in result:
-    print(i)
