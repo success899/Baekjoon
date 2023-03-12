@@ -1,5 +1,4 @@
 import sys
-from collections import defaultdict
 input=sys.stdin.readline
 
 while True:
@@ -11,7 +10,7 @@ while True:
             break
         else:
             N, M = tmp[0], tmp[1]
-            N_M_dict = defaultdict(int)
+            N_M_dict = {}
     for _ in range(N):
         num = int(input())
         N_M_dict[num] = 1
